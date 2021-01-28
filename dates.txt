@@ -1,0 +1,27 @@
+For dates :
+
+There are many ways to get current date and time in java. There are many classes that can be used to get current date and time in java.
+
+1. java.time.format.DateTimeFormatter class
+2. java.text.SimpleDateFormat class
+3. java.time.LocalDate class
+4. java.time.LocalTime class
+5. java.time.LocalDateTime class
+6. java.time.Clock class
+7. java.util.Date class
+8. java.sql.Date class
+9. java.util.Calendar class
+
+
+Get Current Date and Time: java.time.format.DateTimeFormatter
+The LocalDateTime.now() method returns the instance of LocalDateTime class. If we print the instance of LocalDateTime class, it prints current date and time. To format the current date, you can use DateTimeFormatter class which is included in JDK 1.8.
+
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;    
+public class CurrentDateTimeExample1 {    
+  public static void main(String[] args) {    
+   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+   LocalDateTime now = LocalDateTime.now();  
+   System.out.println(dtf.format(now));  
+  }    
+}    
